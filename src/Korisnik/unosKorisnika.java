@@ -6,6 +6,7 @@
 package Korisnik;
 
 import java.sql.SQLException;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -27,6 +28,7 @@ public class unosKorisnika extends javax.swing.JInternalFrame {
     public unosKorisnika() {
         mod=0;
         initComponents();
+        jComboBox1.setModel(new DefaultComboBoxModel<>(korisnikKontroler.tipKorisnika));
         
     }
 
@@ -40,12 +42,12 @@ public class unosKorisnika extends javax.swing.JInternalFrame {
         selektovani=k;
         initComponents();
         jTextField2.setEnabled(false);
-        
+        jComboBox1.setModel(new DefaultComboBoxModel<>(korisnikKontroler.tipKorisnika));
         if (mod==1){
             jButton1.setText("Ažuriraj");
             jTextField1.setText(k.getImeiprezime());
             jTextField2.setText(k.getUser());
-            
+            jComboBox1.setSelectedItem((String)k.getTip());
             jPasswordField1.setEnabled(false);
             jPasswordField2.setEnabled(false);
         
@@ -55,6 +57,7 @@ public class unosKorisnika extends javax.swing.JInternalFrame {
             jTextField2.setEnabled(false);
             jTextField1.setText(k.getImeiprezime());
             jTextField2.setText(k.getUser());
+            jComboBox1.setSelectedItem((String)k.getTip());
             jButton1.setText("Promjeni lozinku");            
            
         }
@@ -191,6 +194,7 @@ public class unosKorisnika extends javax.swing.JInternalFrame {
         if(mod==1){
             selektovani.setImeiprezime(jTextField1.getText());
             selektovani.setUser(jTextField2.getText());
+            selektovani.setTip((String)jComboBox1.getSelectedItem());
             korisnikKontroler kk = new korisnikKontroler();
             try {
                 kk.azurirajKorisnika(selektovani);

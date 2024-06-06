@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,6 +20,7 @@ import lombok.Setter;
 @Setter
 public class korisnikKontroler extends korisni.Kontroler{
     private final korisnik Korisnik = new korisnik();
+    public static final String tipKorisnika[]={"ADMINISTRATOR","KORISNIK"};
     
     /**
      * Prazan konstruktor
@@ -138,6 +141,10 @@ public class korisnikKontroler extends korisni.Kontroler{
         }
         zatvoriKonekciju();
         return zastavica;
+    }
+    
+    public List vratiTipoveKorisnikaLista(){
+        return Arrays.asList(tipKorisnika);
     }
     
     
