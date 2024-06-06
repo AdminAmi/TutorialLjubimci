@@ -8,6 +8,7 @@ import Korisnik.korisnik;
 import Korisnik.pretrazivanje;
 import Korisnik.pretrazivanjeTabela;
 import Korisnik.unosKorisnika;
+import java.awt.Dimension;
 import java.beans.PropertyVetoException;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -30,7 +31,12 @@ public class glavni extends javax.swing.JFrame {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
     
-     private void pokaziWindow(JInternalFrame j){        
+     private void pokaziWindow(JInternalFrame j){ 
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension jInternalFrameSize = j.getSize();
+        int width = (desktopSize.width - jInternalFrameSize.width) / 2;
+        int height = (desktopSize.height - jInternalFrameSize.height) / 2;
+        j.setLocation(width, height);
          j.setVisible(true);
          jDesktopPane1.add(j);
          try{
