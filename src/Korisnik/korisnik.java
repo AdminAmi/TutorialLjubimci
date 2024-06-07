@@ -20,7 +20,14 @@ public class korisnik {
    
     public korisnik() {    }
 
-    
+    /**
+     *
+     * @param id
+     * @param imeiprezime
+     * @param user
+     * @param pass
+     * @param tip
+     */
     public korisnik(int id, String imeiprezime, String user, String pass, String tip) {
         this.id = id;
         this.imeiprezime = imeiprezime;

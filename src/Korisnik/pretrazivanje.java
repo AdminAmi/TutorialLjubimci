@@ -119,7 +119,7 @@ public class pretrazivanje extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:       
         korisnik k = (korisnik)korisnici.get(jList1.getSelectedIndex());        
-        System.out.println("Korisnik:->" + k);
+        //System.out.println("Korisnik:->" + k);
         unosKorisnika uk = new unosKorisnika(k,1);
         uk.setVisible(true);
         this.getParent().add(uk);

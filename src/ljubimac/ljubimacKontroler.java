@@ -17,6 +17,8 @@ import lombok.Setter;
 @Getter @Setter
 public class ljubimacKontroler extends korisni.Kontroler{
     public ljubimac Ljubimac = new ljubimac();
+    public static final String[] vrstaLjubimca={"Pas","Mačka"};
+    public static final String[] statusLjubimca={"Slobodan","Rezervisan","Udomljen"};
     
     /**
      *
@@ -98,13 +100,13 @@ public class ljubimacKontroler extends korisni.Kontroler{
     /**
      *
      * @param opcija 
-     * <br/> (1) Vraća sve ljubimce koji su slobodni
-     * <br/> (2) Vraća sve ljubimce koji su rezervisani
-     * <br/> (3) Vraća sve ljubimce koji su udomljeni
-     * <br/> (4) Vraća sve ljubimce koji su slobodni i koji su vrste pas
-     * <br/> (5) Vraća sve ljubimce koji su slobodni i koji su vrste mačka
-     * <br/> (6) Vraća sve ljubimce 
-     * <br/> (7) Vraća sve ljubimce kojima je istekla rezervacija
+     * <br> (1) Vraća sve ljubimce koji su slobodni
+     * <br> (2) Vraća sve ljubimce koji su rezervisani
+     * <br> (3) Vraća sve ljubimce koji su udomljeni
+     * <br> (4) Vraća sve ljubimce koji su slobodni i koji su vrste pas
+     * <br> (5) Vraća sve ljubimce koji su slobodni i koji su vrste mačka
+     * <br> (6) Vraća sve ljubimce 
+     * <br> (7) Vraća sve ljubimce kojima je istekla rezervacija
      * @return ArrayList ljubimaca koji su definisani opcijom
      * @throws SQLException
      */

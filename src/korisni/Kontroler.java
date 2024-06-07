@@ -24,10 +24,8 @@ public abstract class Kontroler {
     protected Statement         stmt;   
     protected PreparedStatement ps;
     protected Connection        kon;
-    public Kontroler() {
-       
-        dbPath = "jdbc:sqlite:" + PathFromApp()+"\\db\\tutorial.db";
-         
+    public Kontroler() {       
+        dbPath = "jdbc:sqlite:" + PathFromApp()+"\\db\\tutorial.db";         
     }
     /**
      * Metoda koja služi za povezivanje sa bazom podataka. Ako se ne poveže
@@ -38,7 +36,7 @@ public abstract class Kontroler {
      */
     protected Connection getKon() throws SQLException {        
         kon=DriverManager.getConnection(dbPath);
-        System.out.println("Konekcija otvorena" );
+        //System.out.println("Konekcija otvorena" );
         return kon;        
     }  
    
@@ -93,7 +91,7 @@ public abstract class Kontroler {
      */
     public void zatvoriKonekciju() throws SQLException{
         kon.close();
-        System.out.println("zatvaram konekciju sa DB!");
+       // System.out.println("zatvaram konekciju sa DB!");
     }
     
     private String Path(){

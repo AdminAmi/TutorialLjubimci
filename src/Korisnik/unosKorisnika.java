@@ -17,7 +17,8 @@ public class unosKorisnika extends javax.swing.JInternalFrame {
     /**
      * Varijabla mod određuje da li je unos ili ažuriranje
      * 0 - unos
-     * 1- azuriranje
+     * 1 - azuriranje
+     * 2 - promjena passworda
      */
     private int mod = 0;
     private korisnik selektovani = null;
