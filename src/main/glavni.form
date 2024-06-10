@@ -22,6 +22,9 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+X"/>
                 </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/ljubimac/exit16.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Izlaz"/>
               </Properties>
               <Events>
