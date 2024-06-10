@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,10 +25,14 @@ public class UnosLjubimca extends javax.swing.JInternalFrame {
      */
     public UnosLjubimca() {
         initComponents();
+        jComboBox1.setModel(new DefaultComboBoxModel<>(ljubimacKontroler.vrstaLjubimca));
+        jComboBox2.setModel(new DefaultComboBoxModel<>(ljubimacKontroler.statusLjubimca));                
     }
     public UnosLjubimca(korisnik k, int opcija){
         this.k=k;        
         initComponents();
+        //Ovdje treba isto doraditi kao i u slučaju
+        //unosa korisnika, za ažuriranje koji bi bio opcija 1
         
     }
 
@@ -61,11 +66,8 @@ public class UnosLjubimca extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Datum udomljavanja");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pas", "Mačka" }));
-
         jLabel4.setText("Status");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Slobodan", "Rezervisan", "Udomljen" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -168,15 +170,7 @@ public class UnosLjubimca extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     *
-     * @param jedan
-     * @param dva
-     * @return
-     */
-    public double vratiNesto(int jedan, int dva){
-        return 0.0;
-    }
+    
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
