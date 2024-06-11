@@ -14,6 +14,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\TFB5\Documents\NetBeansProjects\git\TutorialLjubimci\resources\password.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Promjena lozinke"/>
               </Properties>
             </MenuItem>
@@ -23,7 +26,7 @@
                   <KeyStroke key="Ctrl+X"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/ljubimac/exit16.png"/>
+                  <Image iconType="2" name="C:\Users\TFB5\Documents\NetBeansProjects\git\TutorialLjubimci\resources\exit16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Izlaz"/>
               </Properties>
@@ -40,6 +43,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\TFB5\Documents\NetBeansProjects\git\TutorialLjubimci\resources\addUser.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Unos novog korisnika"/>
               </Properties>
               <Events>
@@ -48,6 +54,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\TFB5\Documents\NetBeansProjects\git\TutorialLjubimci\resources\searchIcon.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pretra&#x17e;ivanje"/>
               </Properties>
               <Events>
@@ -56,6 +65,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\TFB5\Documents\NetBeansProjects\git\TutorialLjubimci\resources\searchIcon.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pretra&#x17e;ivanje Tabela"/>
               </Properties>
               <Events>
@@ -71,6 +83,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\TFB5\Documents\NetBeansProjects\git\TutorialLjubimci\resources\petIcon.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Unos ljubimca"/>
               </Properties>
               <Events>
@@ -79,6 +94,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\TFB5\Documents\NetBeansProjects\git\TutorialLjubimci\resources\petIcon.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Udomljavanje"/>
               </Properties>
               <Events>
@@ -87,6 +105,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\TFB5\Documents\NetBeansProjects\git\TutorialLjubimci\resources\searchIcon.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pregled ljubimaca"/>
               </Properties>
               <Events>
