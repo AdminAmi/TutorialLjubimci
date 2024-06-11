@@ -14,6 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import ljubimac.PregledLjubimaca;
 import ljubimac.UnosLjubimca;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -30,6 +31,15 @@ public class glavni extends javax.swing.JFrame {
         this.setTitle("Dobro došli korisnik: " + k.getImeiprezime());
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        String imagePath=korisni.Kontroler.PathFromApp() + "\\resources\\";       
+        jMenuItem6.setIcon(new ImageIcon(imagePath+"searchIcon.png"));
+        jMenuItem5.setIcon(new ImageIcon(imagePath+"petIcon.png"));
+        jMenuItem4.setIcon(new ImageIcon(imagePath+"petIcon.png"));
+        jMenuItem1.setIcon(new ImageIcon(imagePath+"addUser.png"));
+        jMenuItem2.setIcon(new ImageIcon(imagePath+"searchIcon.png"));
+        jMenuItem3.setIcon(new ImageIcon(imagePath+"searchIcon.png"));
+        jMenuItem7.setIcon(new ImageIcon(imagePath+"password.png"));
+        jMenuItem8.setIcon(new ImageIcon(imagePath+"exit16.png"));
     }
     
      private void pokaziWindow(JInternalFrame j){ 
@@ -90,12 +100,10 @@ public class glavni extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem7.setIcon(new javax.swing.ImageIcon("C:\\Users\\TFB5\\Documents\\NetBeansProjects\\git\\TutorialLjubimci\\resources\\password.png")); // NOI18N
         jMenuItem7.setText("Promjena lozinke");
         jMenu1.add(jMenuItem7);
 
         jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem8.setIcon(new javax.swing.ImageIcon("C:\\Users\\TFB5\\Documents\\NetBeansProjects\\git\\TutorialLjubimci\\resources\\exit16.png")); // NOI18N
         jMenuItem8.setText("Izlaz");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +116,6 @@ public class glavni extends javax.swing.JFrame {
 
         jMenu2.setText("Korisnik");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\TFB5\\Documents\\NetBeansProjects\\git\\TutorialLjubimci\\resources\\addUser.png")); // NOI18N
         jMenuItem1.setText("Unos novog korisnika");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +124,6 @@ public class glavni extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem1);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\TFB5\\Documents\\NetBeansProjects\\git\\TutorialLjubimci\\resources\\searchIcon.png")); // NOI18N
         jMenuItem2.setText("Pretraživanje");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,7 +132,6 @@ public class glavni extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem2);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon("C:\\Users\\TFB5\\Documents\\NetBeansProjects\\git\\TutorialLjubimci\\resources\\searchIcon.png")); // NOI18N
         jMenuItem3.setText("Pretraživanje Tabela");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +144,6 @@ public class glavni extends javax.swing.JFrame {
 
         jMenu3.setText("Ljubimac");
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon("C:\\Users\\TFB5\\Documents\\NetBeansProjects\\git\\TutorialLjubimci\\resources\\petIcon.png")); // NOI18N
         jMenuItem4.setText("Unos ljubimca");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +152,6 @@ public class glavni extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem4);
 
-        jMenuItem5.setIcon(new javax.swing.ImageIcon("C:\\Users\\TFB5\\Documents\\NetBeansProjects\\git\\TutorialLjubimci\\resources\\petIcon.png")); // NOI18N
         jMenuItem5.setText("Udomljavanje");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,7 +160,6 @@ public class glavni extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem5);
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon("C:\\Users\\TFB5\\Documents\\NetBeansProjects\\git\\TutorialLjubimci\\resources\\searchIcon.png")); // NOI18N
         jMenuItem6.setText("Pregled ljubimaca");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

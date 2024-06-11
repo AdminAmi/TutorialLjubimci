@@ -107,7 +107,7 @@ public abstract class Kontroler {
         return null;
     }
     
-    private String PathFromApp(){
+    public static String PathFromApp(){
         String path= null;
         try {
             path = new File(".").getCanonicalPath();
