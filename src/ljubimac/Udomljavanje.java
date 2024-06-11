@@ -27,6 +27,7 @@ public class Udomljavanje extends javax.swing.JInternalFrame {
      */
     public Udomljavanje() {
         initComponents();
+        setFrameIcon(new javax.swing.ImageIcon(korisni.Kontroler.PathFromApp()+"\\resources\\petIcon.png"));
     }
 
     /**

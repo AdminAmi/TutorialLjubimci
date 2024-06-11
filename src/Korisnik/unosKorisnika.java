@@ -5,8 +5,11 @@
  */
 package Korisnik;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.SQLException;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,10 +29,15 @@ public class unosKorisnika extends javax.swing.JInternalFrame {
     /**
      * Creates new form unosKorisnika
      */
-    public unosKorisnika() {
+    public unosKorisnika()  {
+        
         mod=0;
         initComponents();
         jComboBox1.setModel(new DefaultComboBoxModel<>(korisnikKontroler.tipKorisnika));
+        setFrameIcon(new javax.swing.ImageIcon(korisni.Kontroler.PathFromApp()+"\\resources\\addUser.png"));
+//        URL url = new URL(korisni.Kontroler.PathFromApp() + "\\resources\\"+"addUser.png");
+//        ImageIcon icon = new ImageIcon(url);
+//        this.setFrameIcon(icon);
         
     }
 

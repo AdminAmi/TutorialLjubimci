@@ -25,6 +25,7 @@ public class pretrazivanjeTabela extends javax.swing.JInternalFrame {
      */
     public pretrazivanjeTabela() {
         initComponents();
+        setFrameIcon(new javax.swing.ImageIcon(korisni.Kontroler.PathFromApp()+"\\resources\\searchIcon.png"));
     }
 
     /**

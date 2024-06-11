@@ -20,6 +20,7 @@ public class PregledLjubimaca extends javax.swing.JInternalFrame {
      */
     public PregledLjubimaca() {
         initComponents();
+        setFrameIcon(new javax.swing.ImageIcon(korisni.Kontroler.PathFromApp()+"\\resources\\petIcon.png"));
         ljubimacKontroler k = new ljubimacKontroler();
         try {
             ljubimci = k.vratiLjubimce1(6);

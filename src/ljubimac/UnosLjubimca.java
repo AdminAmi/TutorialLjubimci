@@ -26,7 +26,8 @@ public class UnosLjubimca extends javax.swing.JInternalFrame {
     public UnosLjubimca() {
         initComponents();
         jComboBox1.setModel(new DefaultComboBoxModel<>(ljubimacKontroler.vrstaLjubimca));
-        jComboBox2.setModel(new DefaultComboBoxModel<>(ljubimacKontroler.statusLjubimca));                
+        jComboBox2.setModel(new DefaultComboBoxModel<>(ljubimacKontroler.statusLjubimca));   
+        setFrameIcon(new javax.swing.ImageIcon(korisni.Kontroler.PathFromApp()+"\\resources\\petIcon.png"));
     }
     public UnosLjubimca(korisnik k, int opcija){
         this.k=k;        

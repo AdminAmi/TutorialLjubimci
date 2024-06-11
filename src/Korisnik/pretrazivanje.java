@@ -24,7 +24,8 @@ public class pretrazivanje extends javax.swing.JInternalFrame {
      * Creates new form pretrazivanje
      */
     public pretrazivanje() {
-        initComponents();       
+        initComponents();  
+        setFrameIcon(new javax.swing.ImageIcon(korisni.Kontroler.PathFromApp()+"\\resources\\searchIcon.png"));    
     }
 
     /**
