@@ -20,6 +20,11 @@ import lombok.Setter;
 @Setter
 public class korisnikKontroler extends korisni.Kontroler{
     private final korisnik Korisnik = new korisnik();
+
+    /**
+     * tip korisnika predstavlja vrstu korisnika i može biti
+     * ADMINISTRATOR ili KORISNIK
+     */
     public static final String tipKorisnika[]={"ADMINISTRATOR","KORISNIK"};
     
     /**
@@ -143,6 +148,10 @@ public class korisnikKontroler extends korisni.Kontroler{
         return zastavica;
     }
     
+    /**
+     * Metoda služi za konverziju niza String u Listu
+     * @return Listu tipova korisnika
+     */
     public List vratiTipoveKorisnikaLista(){
         return Arrays.asList(tipKorisnika);
     }

@@ -22,11 +22,11 @@ public class korisnik {
 
     /**
      *
-     * @param id
-     * @param imeiprezime
-     * @param user
-     * @param pass
-     * @param tip
+     * @param id jedinstveni identifikator korisnika
+     * @param imeiprezime ime i prezime korisnika
+     * @param user korisnicko ime za sistem
+     * @param pass lozinka za sistem
+     * @param tip vrsta korisnika
      */
     public korisnik(int id, String imeiprezime, String user, String pass, String tip) {
         this.id = id;

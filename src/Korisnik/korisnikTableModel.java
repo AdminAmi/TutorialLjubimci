@@ -9,13 +9,17 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 /**
- *
- * @author TFB5
+ * Klasa popunjava TableModel za komponentu JTable
+ * @author Amel Džanić
  */
 public class korisnikTableModel extends AbstractTableModel {
-    private List<korisnik> korisnici;
-    private String[] nazivKolona;
+    private final List<korisnik> korisnici;
+    private final String[] nazivKolona;
 
+    /**
+     * Konstruktor <code>korisnikTableModel</code> puni model sa potrebnim podacima
+     * @param korisnici predstavlja listu korisnika koji će se prikazati u tabeli
+     */
     public korisnikTableModel(List<korisnik> korisnici) {
         super();
         this.korisnici = korisnici;
