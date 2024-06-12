@@ -79,7 +79,7 @@ public abstract class Kontroler {
                 try{stmt.close();}
                 catch (SQLException ex){} //do nothing                
             }
-            System.out.println("U konekciji sam terminiranja!");           
+            //System.out.println("U konekciji sam terminiranja!");           
             kon.close();
         }
     }

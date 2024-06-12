@@ -50,25 +50,29 @@ public class unosKorisnika extends javax.swing.JInternalFrame {
         this.mod=mod;
         selektovani=k;
         initComponents();
+        
         jTextField2.setEnabled(false);
         jComboBox1.setModel(new DefaultComboBoxModel<>(korisnikKontroler.tipKorisnika));
         if (mod==1){
             jButton1.setText("Ažuriraj");
+            this.setTitle("Ažuriranje korisnika");
             jTextField1.setText(k.getImeiprezime());
             jTextField2.setText(k.getUser());
             jComboBox1.setSelectedItem((String)k.getTip());
             jPasswordField1.setEnabled(false);
             jPasswordField2.setEnabled(false);
+            setFrameIcon(new javax.swing.ImageIcon(korisni.Kontroler.PathFromApp()+"\\resources\\addUser.png"));
         
         }
         if(mod==2){
+            this.setTitle("Promjena lozinke korisnika");
             jTextField1.setEnabled(false);
             jTextField2.setEnabled(false);
             jTextField1.setText(k.getImeiprezime());
             jTextField2.setText(k.getUser());
             jComboBox1.setSelectedItem((String)k.getTip());
             jButton1.setText("Promjeni lozinku");            
-           
+            setFrameIcon(new javax.swing.ImageIcon(korisni.Kontroler.PathFromApp()+"\\resources\\password.png"));
         }
     }
 
@@ -220,7 +224,11 @@ public class unosKorisnika extends javax.swing.JInternalFrame {
                 korisnikKontroler kk = new korisnikKontroler();
                 selektovani.setPass(pass);
                 try {
-                    kk.promjenaPassworda(selektovani, pass, pass);
+                    kk.promjenaPassworda(selektovani, pass, pass);                    
+                    JOptionPane.showMessageDialog(rootPane, 
+                            "Uspješna promjena lozinke",
+                            "Promjena lozinke", JOptionPane.INFORMATION_MESSAGE);
+                    this.dispose();
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(rootPane, "Greška sa SQL-om");
                     System.out.println("Exception:\n" + ex);

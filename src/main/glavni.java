@@ -21,13 +21,16 @@ import javax.swing.ImageIcon;
  * @author MojLap
  */
 public class glavni extends javax.swing.JFrame {
+    private korisnik k = null;
     
 
     /**
      * Creates new form glavni
      * @param k
+     * @throws java.io.IOException
      */
     public glavni(korisnik k) {
+        this.k = k;
         this.setTitle("Dobro došli korisnik: " + k.getImeiprezime());
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -40,7 +43,10 @@ public class glavni extends javax.swing.JFrame {
         jMenuItem3.setIcon(new ImageIcon(imagePath+"searchIcon.png"));
         jMenuItem7.setIcon(new ImageIcon(imagePath+"password.png"));
         jMenuItem8.setIcon(new ImageIcon(imagePath+"exit16.png"));
+       
     }
+    
+    
     
      private void pokaziWindow(JInternalFrame j){ 
         Dimension desktopSize = jDesktopPane1.getSize();
@@ -82,6 +88,8 @@ public class glavni extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jDesktopPane1.setBackground(new java.awt.Color(204, 204, 204));
+
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
@@ -100,7 +108,13 @@ public class glavni extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem7.setText("Promjena lozinke");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem7);
 
         jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -231,6 +245,12 @@ public class glavni extends javax.swing.JFrame {
         // TODO add your handling code here:
           System.exit(0);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        unosKorisnika uk = new unosKorisnika(k, 2);
+        pokaziWindow(uk);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     /**
      * @param args the command line arguments

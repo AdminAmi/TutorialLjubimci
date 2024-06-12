@@ -8,7 +8,10 @@ package main;
 
 
 import Korisnik.korisnikKontroler;
+import java.io.IOException;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
@@ -108,8 +111,12 @@ public class LogIn extends javax.swing.JFrame {
                 //System.out.println(kk.getKorisnik());
 //                GlavniProzor gp = new GlavniProzor(kk.getKorisnik());
 //                gp.setVisible(true);
-                glavni g = new glavni(kk.getKorisnik());
-                g.setVisible(true);
+                glavni g;
+               
+                    g = new glavni(kk.getKorisnik());
+                     g.setVisible(true);
+               
+               
                 //JOptionPane.showMessageDialog(rootPane, "Uspješno logirani na sistem!","Poruka",JOptionPane.INFORMATION_MESSAGE);
                 this.dispose();
             }
